@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ContactsViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EditContactViewController" customModuleProvider="" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,10 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2967" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Full Name">
+                                <rect key="frame" x="20" y="83" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2968" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Emaill Address">
+                                <rect key="frame" x="20" y="127" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2969" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="180" width="375" height="390"/>
+                            </imageView>
+                        </subviews>
                     </view>
                     <navigationItem id="2961" key="navigationItem">
                         <barButtonItem key="rightBarButtonItem" id="2962" systemItem="save"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editContactFullNameLabel" destination="2967" id="name-outlet-2967"/>
+                        <outlet property="editContactEmailLabel" destination="2968" id="name-outlet-2968"/>
+                        <outlet property="editContactImage" destination="2969" id="name-outlet-2969"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +61,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1479" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="4" width="82" height="66"/>
+                                            <rect key="frame" x="20" y="4" width="80" height="60"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1480" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                             <rect key="frame" x="123" y="4" width="271" height="21"/>
@@ -58,9 +78,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="contactEmailLabel" destination="1481" id="name-outlet-1481"/>
-                                    <outlet property="contactNameLabel" destination="1480" id="name-outlet-1480"/>
-                                    <outlet property="contactImage" destination="1479" id="name-outlet-1479"/>
+                                    <outlet property="contactsEmailLabel" destination="1481" id="name-outlet-1481"/>
+                                    <outlet property="contactsFullNameLabel" destination="1480" id="name-outlet-1480"/>
+                                    <outlet property="contactsImage" destination="1479" id="name-outlet-1479"/>
                                     <segue id="1849" destination="1485" kind="show"/>
                                 </connections>
                             </tableViewCell>
@@ -99,7 +119,7 @@
         </scene>
         <scene sceneID="1484">
             <objects>
-                <viewController id="1485" sceneMemberID="viewController" customClass="EmailContactViewController">
+                <viewController id="1485" sceneMemberID="viewController" customClass="ViewContactViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1482"/>
                         <viewControllerLayoutGuide type="bottom" id="1483"/>
@@ -108,7 +128,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2970" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="79" width="375" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2971" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="FirstName LastName">
+                                <rect key="frame" x="20" y="492" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22" weight="semibold"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2972" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="532" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="viewContactImage" destination="2970" id="name-outlet-2970"/>
+                        <outlet property="viewContactFullNameLabel" destination="2971" id="name-outlet-2971"/>
+                        <outlet property="viewContactEmailLabel" destination="2972" id="name-outlet-2972"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1487" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

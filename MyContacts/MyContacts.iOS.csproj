@@ -84,24 +84,24 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ContactsTableViewController.cs" />
-    <Compile Include="ContactsTableViewController.designer.cs">
+    <Compile Include="Controllers\ContactsTableViewController.cs" />
+    <Compile Include="Controllers\ContactsTableViewController.designer.cs">
       <DependentUpon>ContactsTableViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="ContactsViewController.cs" />
-    <Compile Include="ContactsViewController.designer.cs">
-      <DependentUpon>ContactsViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContactTableViewCell.cs" />
-    <Compile Include="ContactTableViewCell.designer.cs">
+    <Compile Include="Controllers\ContactTableViewCell.cs" />
+    <Compile Include="Controllers\ContactTableViewCell.designer.cs">
       <DependentUpon>ContactTableViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmailContactViewController.cs" />
-    <Compile Include="EmailContactViewController.designer.cs">
-      <DependentUpon>EmailContactViewController.cs</DependentUpon>
+    <Compile Include="Controllers\EditContactViewController.cs" />
+    <Compile Include="Controllers\EditContactViewController.designer.cs">
+      <DependentUpon>EditContactViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controllers\ViewContactViewController.cs" />
+    <Compile Include="Controllers\ViewContactViewController.designer.cs">
+      <DependentUpon>ViewContactViewController.cs</DependentUpon>
+    </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
