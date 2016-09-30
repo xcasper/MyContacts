@@ -9,5 +9,17 @@ namespace MyContacts
         public ViewContactViewController (IntPtr handle) : base (handle)
         {
         }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            viewContactEmailButton.TouchUpInside += ViewContactEmailButton_TouchUpInside;
+        }
+
+        private void ViewContactEmailButton_TouchUpInside(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

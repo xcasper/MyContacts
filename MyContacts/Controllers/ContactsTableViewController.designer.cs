@@ -14,8 +14,16 @@ namespace MyContacts
     [Register ("ContactsTableViewController")]
     partial class ContactsTableViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem addContactButton { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (addContactButton != null) {
+                addContactButton.Dispose ();
+                addContactButton = null;
+            }
         }
     }
 }

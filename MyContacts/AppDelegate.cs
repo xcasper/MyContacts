@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using System.Collections.Generic;
 using UIKit;
 
 namespace MyContacts
@@ -9,6 +10,7 @@ namespace MyContacts
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
+        public List<Contact> contactList = new List<Contact>();
         // class-level declarations
 
         public override UIWindow Window

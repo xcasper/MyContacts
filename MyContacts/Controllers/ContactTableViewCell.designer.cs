@@ -24,7 +24,7 @@ namespace MyContacts
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView contactsImage { get; set; }
+        UIKit.UIImageView contactsImageView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -38,9 +38,9 @@ namespace MyContacts
                 contactsFullNameLabel = null;
             }
 
-            if (contactsImage != null) {
-                contactsImage.Dispose ();
-                contactsImage = null;
+            if (contactsImageView != null) {
+                contactsImageView.Dispose ();
+                contactsImageView = null;
             }
         }
     }

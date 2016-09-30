@@ -24,7 +24,15 @@ namespace MyContacts
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView editContactImage { get; set; }
+        UIKit.UIButton editContactImageButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView editContactImageView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem editContactSaveButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -38,9 +46,19 @@ namespace MyContacts
                 editContactFullNameLabel = null;
             }
 
-            if (editContactImage != null) {
-                editContactImage.Dispose ();
-                editContactImage = null;
+            if (editContactImageButton != null) {
+                editContactImageButton.Dispose ();
+                editContactImageButton = null;
+            }
+
+            if (editContactImageView != null) {
+                editContactImageView.Dispose ();
+                editContactImageView = null;
+            }
+
+            if (editContactSaveButton != null) {
+                editContactSaveButton.Dispose ();
+                editContactSaveButton = null;
             }
         }
     }

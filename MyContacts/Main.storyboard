@@ -27,9 +27,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2969" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2969" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="cameraIcon.jpg">
                                 <rect key="frame" x="20" y="180" width="375" height="390"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2979" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="180" width="375" height="390"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
                         </subviews>
                     </view>
                     <navigationItem id="2961" key="navigationItem">
@@ -38,7 +44,9 @@
                     <connections>
                         <outlet property="editContactFullNameLabel" destination="2967" id="name-outlet-2967"/>
                         <outlet property="editContactEmailLabel" destination="2968" id="name-outlet-2968"/>
-                        <outlet property="editContactImage" destination="2969" id="name-outlet-2969"/>
+                        <outlet property="editContactImageView" destination="2969" id="name-outlet-2969"/>
+                        <outlet property="editContactImageButton" destination="2979" id="name-outlet-2979"/>
+                        <outlet property="editContactSaveButton" destination="2962" id="name-outlet-2962"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,8 +88,8 @@
                                 <connections>
                                     <outlet property="contactsEmailLabel" destination="1481" id="name-outlet-1481"/>
                                     <outlet property="contactsFullNameLabel" destination="1480" id="name-outlet-1480"/>
-                                    <outlet property="contactsImage" destination="1479" id="name-outlet-1479"/>
-                                    <segue id="1849" destination="1485" kind="show"/>
+                                    <outlet property="contactsImageView" destination="1479" id="name-outlet-1479"/>
+                                    <segue id="4968" destination="1485" kind="show"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,10 +101,13 @@
                     <navigationItem key="navigationItem" title="Contacts" id="5">
                         <barButtonItem key="rightBarButtonItem" id="501" systemItem="add" width="40">
                             <connections>
-                                <segue id="2959" destination="BYZ-38-t0r" kind="show"/>
+                                <segue id="4686" destination="BYZ-38-t0r" kind="show"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addContactButton" destination="501" id="name-outlet-501"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,23 +144,30 @@
                                 <rect key="frame" x="20" y="79" width="375" height="390"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2971" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="FirstName LastName">
-                                <rect key="frame" x="20" y="492" width="375" height="21"/>
+                                <rect key="frame" x="20" y="490" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22" weight="semibold"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2972" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="20" y="532" width="375" height="21"/>
+                                <rect key="frame" x="20" y="525" width="375" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2980" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="525" width="375" height="20"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="viewContactImage" destination="2970" id="name-outlet-2970"/>
+                        <outlet property="viewContactImageView" destination="2970" id="name-outlet-2970"/>
                         <outlet property="viewContactFullNameLabel" destination="2971" id="name-outlet-2971"/>
                         <outlet property="viewContactEmailLabel" destination="2972" id="name-outlet-2972"/>
+                        <outlet property="viewContactEmailButton" destination="2980" id="name-outlet-2980"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1487" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,4 +178,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina55"/>
     </simulatedMetricsContainer>
+    <resources>
+        <image name="cameraIcon.jpg" width="512" height="512"/>
+    </resources>
 </document>

@@ -16,6 +16,10 @@ namespace MyContacts
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton viewContactEmailButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel viewContactEmailLabel { get; set; }
 
         [Outlet]
@@ -24,10 +28,15 @@ namespace MyContacts
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView viewContactImage { get; set; }
+        UIKit.UIImageView viewContactImageView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (viewContactEmailButton != null) {
+                viewContactEmailButton.Dispose ();
+                viewContactEmailButton = null;
+            }
+
             if (viewContactEmailLabel != null) {
                 viewContactEmailLabel.Dispose ();
                 viewContactEmailLabel = null;
@@ -38,9 +47,9 @@ namespace MyContacts
                 viewContactFullNameLabel = null;
             }
 
-            if (viewContactImage != null) {
-                viewContactImage.Dispose ();
-                viewContactImage = null;
+            if (viewContactImageView != null) {
+                viewContactImageView.Dispose ();
+                viewContactImageView = null;
             }
         }
     }
