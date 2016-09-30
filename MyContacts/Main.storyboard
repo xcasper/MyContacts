@@ -109,9 +109,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem title="Title" id="2963" key="navigationItem">
-                        <barButtonItem key="rightBarButtonItem" id="2964" systemItem="save"/>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1487" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
