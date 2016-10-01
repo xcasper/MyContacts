@@ -5,8 +5,8 @@ C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulat
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\optimized\Entitlements.plist
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\optimized\
-C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\MyContacts.iOS.csprojResolveAssemblyReference.cache
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\MyContacts.exe
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\MyContacts.pdb
+C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\MyContacts.iOS.csprojResolveAssemblyReference.cache
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\obj\iPhoneSimulator\Debug\MyContacts.exe.mdb
 C:\Users\cglec\OneDrive\Documents\GitHub\MyContacts\MyContacts\bin\iPhoneSimulator\Debug\MyContacts.exe.mdb

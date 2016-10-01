@@ -16,31 +16,31 @@ namespace MyContacts
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel contactsEmailLabel { get; set; }
+        UIKit.UILabel contactListEmailLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel contactsFullNameLabel { get; set; }
+        UIKit.UILabel contactListFullNameLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView contactsImageView { get; set; }
+        UIKit.UIImageView contactListImageView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (contactsEmailLabel != null) {
-                contactsEmailLabel.Dispose ();
-                contactsEmailLabel = null;
+            if (contactListEmailLabel != null) {
+                contactListEmailLabel.Dispose ();
+                contactListEmailLabel = null;
             }
 
-            if (contactsFullNameLabel != null) {
-                contactsFullNameLabel.Dispose ();
-                contactsFullNameLabel = null;
+            if (contactListFullNameLabel != null) {
+                contactListFullNameLabel.Dispose ();
+                contactListFullNameLabel = null;
             }
 
-            if (contactsImageView != null) {
-                contactsImageView.Dispose ();
-                contactsImageView = null;
+            if (contactListImageView != null) {
+                contactListImageView.Dispose ();
+                contactListImageView = null;
             }
         }
     }

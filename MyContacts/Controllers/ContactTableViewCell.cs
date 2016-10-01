@@ -9,5 +9,12 @@ namespace MyContacts
         public ContactTableViewCell (IntPtr handle) : base (handle)
         {
         }
+
+        public void SetContactValues(Contact contact)
+        {
+            contactListFullNameLabel.Text = contact.FullName;
+            contactListEmailLabel.Text = contact.Email;
+            contactListImageView.Image = contact.Image;
+        }
     }
 }

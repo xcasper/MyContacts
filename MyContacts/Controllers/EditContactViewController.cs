@@ -6,6 +6,7 @@ namespace MyContacts
 {
     public partial class EditContactViewController : UIViewController
     {
+        UIImagePickerController imagePickerController;
         public EditContactViewController (IntPtr handle) : base (handle)
         {
         }
@@ -29,11 +30,31 @@ namespace MyContacts
 
             var del = UIApplication.SharedApplication.Delegate as AppDelegate;
             del.contactList.Add(contact);
+
+            NavigationController.PopViewController(true);
         }
 
         private void EditContactImageButton_TouchUpInside(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            imagePickerController = new UIImagePickerController();
+            imagePickerController.SourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            //imagePickerController.MediaTypes = UIImagePickerController.AvailableMediaTypes(UIImagePickerControllerSourceType.PhotoLibrary);
+
+            imagePickerController.Canceled += ImagePickerController_Canceled;
+            imagePickerController.FinishedPickingMedia += ImagePickerController_FinishedPickingMedia;
+
+            NavigationController.PresentModalViewController(imagePickerController, true);
+        }
+
+        private void ImagePickerController_FinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs e)
+        {
+            editContactImageView.Image = e.Info[UIImagePickerController.OriginalImage] as UIImage;
+            imagePickerController.DismissModalViewController(true);
+        }
+
+        private void ImagePickerController_Canceled(object sender, EventArgs e)
+        {
+            imagePickerController.DismissModalViewController(true);
         }
 
         public override void DidReceiveMemoryWarning()
